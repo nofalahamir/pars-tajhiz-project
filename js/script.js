@@ -55,12 +55,10 @@ function initializeScripts() {
                 loadingScreen.classList.add('hidden');
                 setTimeout(() => {
                     loadingScreen.style.display = 'none';
-                    startHeroAnimations();
                 }, 500);
             }, 1500);
-        } else {
-            startHeroAnimations();
         }
+        startHeroAnimations();
     });
 
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
