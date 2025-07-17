@@ -301,17 +301,22 @@ window.addEventListener('load', function() {
 
 // Hero Title Animation
 function startHeroAnimations() {
+    const heroSection = document.getElementById('hero');
+    if (!heroSection) {
+        return;
+    }
+
     const heroTitle = document.querySelector('.hero-title');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     const heroButtons = document.querySelector('.hero-buttons');
-    
+
     if (heroTitle) {
         // Initial state
         heroTitle.style.opacity = '0';
         heroTitle.style.filter = 'blur(20px)';
         heroTitle.style.transform = 'scale(2) translateY(50px)';
         heroTitle.style.transition = 'all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        
+
         // Animate title
         setTimeout(() => {
             heroTitle.style.opacity = '1';
@@ -319,14 +324,14 @@ function startHeroAnimations() {
             heroTitle.style.transform = 'scale(1) translateY(0)';
         }, 500);
     }
-    
+
     if (heroSubtitle) {
         // Initial state
         heroSubtitle.style.opacity = '0';
         heroSubtitle.style.filter = 'blur(10px)';
         heroSubtitle.style.transform = 'scale(1.5) translateY(30px)';
         heroSubtitle.style.transition = 'all 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        
+
         // Animate subtitle
         setTimeout(() => {
             heroSubtitle.style.opacity = '1';
@@ -334,14 +339,14 @@ function startHeroAnimations() {
             heroSubtitle.style.transform = 'scale(1) translateY(0)';
         }, 1200);
     }
-    
+
     if (heroButtons) {
         // Initial state
         heroButtons.style.opacity = '0';
         heroButtons.style.filter = 'blur(5px)';
         heroButtons.style.transform = 'scale(1.2) translateY(20px)';
         heroButtons.style.transition = 'all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        
+
         // Animate buttons
         setTimeout(() => {
             heroButtons.style.opacity = '1';
