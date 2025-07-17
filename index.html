@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرکت پارس تجهیز مدرن ایرانیان</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    .mines-gallery {
+        width: 100vw;
+        min-height: 80vh;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mines-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100vw;
+        height: 70vh;
+        gap: 0;
+    }
+
+    .mine-image {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.3s;
+    }
+
+    .mine-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s cubic-bezier(.4,2,.6,1);
+    }
+
+    .mine-image:hover img {
+        transform: scale(1.08) rotateZ(-1deg);
+        filter: brightness(0.85);
+    }
+
+    .about-section-with-video {
+        position: relative;
+        width: 100%;
+        min-height: 400px; /* ارتفاع دلخواه */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-bg-video {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        filter: brightness(0.5); /* تیره کردن ویدیو برای خوانایی متن */
+    }
+
+    .about-content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        text-align: right;
+        padding: 40px;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        direction: rtl;
+    }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-logo">
+                <img src="images/logo.png" alt="پارس تجهیز">
+            </div>
+            <div class="loader-spinner"></div>
+            <p>در حال بارگذاری...</p>
+        </div>
+    </div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <!-- لطفاً فایل لوگوی خود را در پوشه images با نام logo.png قرار دهید -->
+                <a href="#"><img src="images/logo.png" alt="لوگو شرکت پارس تجهیز مدرن ایرانیان"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">صفحه اصلی</a></li>
+                <li><a href="about.html">درباره ما</a></li>
+                <li><a href="products.html">محصولات</a></li>
+                <li><a href="#partners">همکاران ما</a></li>
+                <li><a href="contact.html">تماس با ما</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">پارس تجهیز مدرن ایرانیان</h1>
+                <p class="hero-subtitle">تامین کننده پیشرو تجهیزات صنعتی و ماشین‌آلات مدرن با کیفیت جهانی</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="cta-button">خدمات ما</a>
+                    <a href="#contact" class="cta-button secondary">تماس با ما</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="mines-gallery" class="mines-gallery">
+            <div class="mines-grid">
+                <div class="mine-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYCkETDHyhO1fjH2YVT-ijXFXESZ5j9c4aA&s" alt="معدن 1"></div>
+                <div class="mine-image"><img src="https://dl.madresebourse.com/wp-content/uploads/2021/11/21132909/61810627.jpg" alt="معدن 2"></div>
+                <div class="mine-image"><img src="https://www.samanenergy.ir/wp-content/uploads/2024/02/Opal-Parsian-Sangan-Industrial-and-Mining-Company-1.jpg" alt="معدن 3"></div>
+                <div class="mine-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTawxMkrBNd15FWKtQdsh_ZQ9yyn4JLxm-WlQ&s" alt="معدن 4"></div>
+            </div>
+        </section>
+
+        <section id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">مشتری راضی</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">پروژه موفق</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">سال تجربه</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="24">0</div>
+                        <div class="stat-label">ساعت پشتیبانی</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="container">
+            <h2 class="section-title">محصولات کلیدی</h2>
+            <p class="section-subtitle">نگاهی به برخی از محصولات برجسته و پرفروش ما</p>
+            <div class="products-swiper swiper">
+                <div class="swiper-wrapper">
+                    <!-- Product Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h3 class="product-title">پمپ‌های صنعتی</h3>
+                                <p class="product-description">انواع پمپ‌های سانتریفیوژ، دیافراگمی و دنده‌ای برای کاربردهای مختلف صنعتی.</p>
+                            </div>
+                            <img src="images/pump.jpg" alt="پمپ‌های صنعتی" class="product-image">
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h3 class="product-title">گیربکس‌های صنعتی</h3>
+                                <p class="product-description">گیربکس‌های حلزونی، هلیکال و خورشیدی با راندمان و دوام بالا.</p>
+                            </div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaaElyGf3veXTAylS0g9hNZYdLrH7eA4YhTw&s" alt="گیربکس‌های صنعتی" class="product-image">
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h3 class="product-title">شیرآلات صنعتی</h3>
+                                <p class="product-description">تامین انواع شیرآلات پروانه‌ای، توپی و کشویی با استانداردهای بین‌المللی.</p>
+                            </div>
+                            <img src="https://www.energyinformation.ir/media/k2/items/cache/e6f7eb86455f00eeac074fd25095dcde_XL.jpg" alt="شیرآلات صنعتی" class="product-image">
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-content">
+                                <h3 class="product-title">تجهیزات پنوماتیک</h3>
+                                <p class="product-description">جک‌ها، شیرهای برقی و واحدهای مراقبت پنوماتیک از برندهای معتبر.</p>
+                            </div>
+                            <img src="https://pneumaticazadi.com/wp-content/uploads/2024/01/%D9%87%DB%8C%D8%AF%D8%B1%D9%88.jpg" alt="تجهیزات پنوماتیک" class="product-image">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="container about-bg">
+            <div class="about-section-with-video">
+                <video autoplay loop muted playsinline class="about-bg-video">
+                    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+                    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+                </video>
+                <div class="about-content">
+                    <h2 class="section-title">درباره ما</h2>
+                    <div class="about-text">
+                        <h3>پیشرو در صنعت، متعهد به کیفیت</h3>
+                        <p>شرکت پارس تجهیز مدرن ایرانیان با بیش از یک دهه تجربه در زمینه تامین و واردات تجهیزات صنعتی، به عنوان یکی از معتبرترین نام‌ها در این حوزه شناخته می‌شود. ما با بهره‌گیری از دانش فنی روز و همکاری با برندهای برتر جهانی، محصولاتی با بالاترین سطح کیفیت و اطمینان را به مشتریان خود ارائه می‌دهیم.</p>
+                        <p>هدف ما ارائه راهکارهای جامع و نوآورانه برای صنایع مختلف از جمله نفت، گاز، پتروشیمی، معادن و صنایع غذایی است. تیم متخصص ما همواره آماده ارائه مشاوره و پشتیبانی فنی برای انتخاب بهترین تجهیزات متناسب با نیاز شماست.</p>
+                        <ul class="about-features">
+                            <li><i class="fas fa-check-circle"></i> تضمین کیفیت و اصالت کالا</li>
+                            <li><i class="fas fa-headset"></i> مشاوره تخصصی و پشتیبانی فنی</li>
+                            <li><i class="fas fa-truck"></i> ارسال سریع و مطمئن به سراسر کشور</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="container">
+            <h2 class="section-title">خدمات ما</h2>
+            <div class="services-grid-simple">
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <p>مشاوره فنی و مهندسی</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <p>واردات تخصصی و تامین قطعات</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-headset"></i>
+                    <p>پشتیبانی پس از فروش</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-chart-line"></i>
+                    <p>بهینه‌سازی و جایگزینی تجهیزات</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">صدای مشتریان</h2>
+                <p class="section-subtitle">اعتماد شما، بزرگترین سرمایه ماست.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"خدمات و پشتیبانی فنی شرکت پارس تجهیز بی‌نظیر است. قطعات مورد نیاز ما در سریع‌ترین زمان و با بهترین کیفیت به دستمان رسید."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>مهندس رضایی</h4>
+                                <span>مدیر تولید</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"تخصص و مشاوره تیم پارس تجهیز در انتخاب تجهیزات، به ما در بهینه‌سازی فرآیندهای پالایشگاه کمک شایانی کرد. کاملا حرفه‌ای!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>دکتر احمدی</h4>
+                                <span>سرپرست فنی</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="container">
+            <h2 class="section-title">برخی از همکاران تجاری ما</h2>
+            <div class="partners-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY2FGz6r5i8rL27wA8Fgif56x6e0Y2_F6-fw&s" alt="شرکت چادرملو"></div>
+                            <div class="partner-name">شرکت چادرملو</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://ahanco.com/wp-content/uploads/06_Mobarakeh1-300x240.jpg" alt="شرکت فولاد مبارکه"></div>
+                            <div class="partner-name">شرکت فولاد مبارکه</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="data:image/png;base64,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" alt="شرکت ملی مس ایران"></div>
+                            <div class="partner-name">شرکت ملی مس ایران</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://www.e-estekhdam.com/wp-content/uploads/2024/05/GOLGOHAR.png" alt="شرکت گل‌گهر"></div>
+                            <div class="partner-name">شرکت گل‌گهر</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9TR5359faZGUc5pinZqI1wyBE7KSwHvXftQ&s" alt="شرکت فولاد خوزستان"></div>
+                            <div class="partner-name">شرکت فولاد خوزستان</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://www.iranforming.com/wp-content/uploads/2021/12/%D8%B0%D9%88%D8%A8-%D8%A2%D9%87%D9%86-%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86-%DA%A9%D8%A7%D9%87%D8%B4-%D8%AA%D9%88%D9%84%DB%8C%D8%AF.jpg" alt="شرکت ذوب آهن اصفهان"></div>
+                            <div class="partner-name">شرکت ذوب آهن اصفهان</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://tehrancement.co.ir/wp-content/uploads/2017/07/arm2.jpg" alt="شرکت سیمان تهران"></div>
+                            <div class="partner-name">شرکت سیمان تهران</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://bipc.ir/fa/wp-content/uploads/2019/12/logo-98-scaled.jpg" alt="شرکت پتروشیمی بندر امام"></div>
+                            <div class="partner-name">شرکت پتروشیمی بندر امام</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://cdn.naftonline.ir/images/docs/000012/n00012094-b.jpg" alt="شرکت نفت فلات قاره"></div>
+                            <div class="partner-name">شرکت نفت فلات قاره</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="partner-card glass">
+                            <div class="partner-logo"><img src="https://nepars.ir/wp-content/uploads/2022/07/%D9%81%D9%88%D9%84%D8%A7%D8%AF-%D9%87%D8%B1%D9%85%D8%B2%DA%AF%D8%A7%D9%86_hosco.ir_.jpg" alt="شرکت فولاد هرمزگان"></div>
+                            <div class="partner-name">شرکت فولاد هرمزگان</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next custom-nav"></div>
+                <div class="swiper-button-prev custom-nav"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2 class="section-title">با ما در ارتباط باشید</h2>
+            <p class="section-subtitle">برای دریافت مشاوره، استعلام قیمت یا ارسال درخواست، از طریق فرم زیر اقدام کنید.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>اطلاعات تماس</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
+                            <span>شنبه تا چهارشنبه ۸ صبح تا ۶ عصر</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>info@parstajhiz.com</p>
+                            <span>پاسخگویی ۲۴ ساعته</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>تهران، خیابان اصلی، برج صنعتی، طبقه ۱۰</p>
+                            <span>دفتر مرکزی</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="نام و نام خانوادگی" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="ایمیل شما" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" id="phone" placeholder="شماره تماس" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea name="message" id="message" placeholder="پیام شما..." rows="5" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="cta-button">
+                        <span class="button-text">ارسال پیام</span>
+                        <span class="button-loader" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>پارس تجهیز مدرن ایرانیان</h4>
+                    <p>پیشرو در تامین و واردات قطعات تخصصی صنایع معدنی و پالایشگاهی</p>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمات ما</h4>
+                    <ul>
+                        <li>مشاوره فنی</li>
+                        <li>واردات تخصصی</li>
+                        <li>پشتیبانی پس از فروش</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تماس با ما</h4>
+                    <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
+                    <p>info@parstajhiz.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ۱۴۰۳ - تمامی حقوق برای شرکت پارس تجهیز مدرن ایرانیان محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    const partnersSwiper = new Swiper('.partners-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    </script>
+</body>
+</html> 
