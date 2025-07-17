@@ -125,6 +125,33 @@ document.addEventListener("DOMContentLoaded", function() {
             revealObserver.observe(el);
         });
 
+        // Hero Title Animation
+        const heroSection = document.getElementById('hero');
+        if (heroSection) {
+            const heroTitle = document.querySelector('.hero-title');
+            const heroSubtitle = document.querySelector('.hero-subtitle');
+            const heroButtons = document.querySelector('.hero-buttons');
+
+            if (heroTitle) {
+                setTimeout(() => {
+                    heroTitle.classList.add('animated');
+                }, 500);
+            }
+
+            if (heroSubtitle) {
+                setTimeout(() => {
+                    heroSubtitle.classList.add('animated');
+                }, 1200);
+            }
+
+            if (heroButtons) {
+                setTimeout(() => {
+                    heroButtons.classList.add('animated');
+                }, 1800);
+            }
+        }
+
+
         // --- SWIPER INITIALIZATION ---
         if (typeof Swiper !== 'undefined') {
             // Products Swiper
